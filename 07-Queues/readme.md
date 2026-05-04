@@ -5,8 +5,7 @@
   - [Queue (With Capacity)](#queue-with-capacity)
   - [Queue (Linked List)](#queue-linked-list)
   - [Queue Comparison](#queue-comparison)
-- [Other Data Structures](#other-data-structures)
-- [Complexity Chart](#complexity-chart)
+- [Queue Modules](#queue-modules)
 ---
 ## Queue
 
