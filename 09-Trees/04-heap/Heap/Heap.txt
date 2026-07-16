@@ -7,6 +7,11 @@ If indexing starts from 0.
 • Arr[(2*i)+1] Returns the left child node.
 • Arr[(2*i)+2] Returns the right child node.
 
+or if indexing starts from 1:
+then root is arr[0], parent node is i//2
+left node - 2*i
+right node - 2*i + 1
+
 Operations on Max Heap (and min heap) include:
 1. getMax(): It returns the root element of Max Heap. Time Complexity of this operation is O(1).
 2. extractMax(): Removes the maximum element from MaxHeap. Time Complexity of this Operation is O(Log n)
