@@ -1,40 +1,42 @@
-# Graph Data Structures in Python
+# Graph Data Structures & Algorithms in Python
 
-This repository contains multiple Python implementations for undirected graph data structures using adjacency lists. The included code demonstrates how to create nodes (vertices), add edges, and display graph connections. These implementations provide a foundation for further development in network analysis, algorithm practice, or educational use.
+A collection of Python implementations and Jupyter Notebooks covering fundamental graph data structures, traversal techniques, shortest path algorithms, and minimum spanning trees.
 
-## Features
+## Features & Topics Covered
 
-- Object-oriented design with classes for graph representation.
-- Support for dynamic insertion of nodes and undirected edges.
-- Adjacency list representations to store connections efficiently.
-- Methods to visualize and print graph connectivity.
-- Practical usage examples within each script.
+- **Basic Implementations**: Graph creation using adjacency lists (`01-graph-implementation.ipynb`).
+- **Traversals**: Breadth-First Search (BFS) and Depth-First Search (DFS) (`02-bfs-and-dfs.ipynb`).
+- **Topological Sort**: Directed Acyclic Graph (DAG) ordering (`03-topological-sort.ipynb`).
+- **Disjoint Set (Union-Find)**: Optimizations with rank and path compression (`04-disjoint-sets.ipynb`, `DisjointSet.py`).
+- **Single Source Shortest Path (SSSP)**:
+  - BFS (unweighted graphs)
+  - Dijkstra's Algorithm (weighted graphs without negative edges)
+  - Bellman-Ford Algorithm (handles negative weight edges & detects negative cycles)
+  - Includes comparative analysis across SSSP algorithms.
+- **All-Pairs Shortest Path (APSP)**:
+  - Floyd-Warshall Algorithm.
+- **Minimum Spanning Tree (MST - Greedy)**:
+  - Kruskal's Algorithm (with Disjoint Set)
+  - Prim's Algorithm.
 
-## File Overview
+## Directory Structure
 
-### `graphs.py`
+```
+12-Graphs/
+├── 01-graph-implementation.ipynb
+├── 02-bfs-and-dfs.ipynb
+├── 03-topological-sort.ipynb
+├── 04-disjoint-sets.ipynb
+├── SSSP/
+│   ├── 01-bfs-SSSP.ipynb
+│   ├── 02-DijkstraSSSP.ipynb
+│   └── 03-BellmanFord.ipynb
+├── APSP/
+│   └── 01-Floyd-Warshall.ipynb
+└── MST - Greedy/
+    ├── 01-Kruskal.ipynb
+    ├── 02-Prim's.ipynb
+    └── DisjointSet.py
+```
 
-- Provides an undirected graph implementation with:
-  - Method to insert nodes (`insert_node`)
-  - Method to insert edges (`insert_edge`)
-  - Method to print the adjacency list (`show_connections`)
-- Comments and example usage provided within the file.
-- Maintains total number of nodes via `no_of_nodes`.
-- Adjacency list is a `dict` mapping nodes to neighbor lists.
-
-### `minimalist_graphs.py`
-
-- Alternate minimalist implementation with:
-  - Methods to add vertices (`addVertex`)
-  - Methods to add edges (`addEdge`)
-  - Method to print all connections (`showConnection`)
-- Uses a dictionary (`adjacentlist`) for adjacency structure.
-- Designed for simplicity and readability.
-
-## Usage
-
-1. Clone this repository and extract the files.
-2. Import or run the scripts in your Python environment (Python 3.x recommended).
-3. Review the comments and example code for guidance.
-4. Modify the graphs or add custom methods to suit project needs.
 

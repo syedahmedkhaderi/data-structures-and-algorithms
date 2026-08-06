@@ -1,37 +1,32 @@
-# BST-Heap-Trie
+# Trees & Heap & Trie
 
 ## Overview
-This repository features Python implementations of three foundational data structures: Binary Search Tree (BST), Heap, and Trie (prefix tree). These implementations are designed to provide a clear, educational codebase suitable for learning, experimentation, and integration into larger projects where these data structures are needed.
+This repository features Python implementations and notebooks of core tree-based data structures: Binary Trees, Binary Search Trees (BST), self-balancing AVL Trees, Heaps, and Tries (prefix trees).
 
 ## Repository Structure
 
-| File/Folder           | Description                                                   |
-|----------------------|---------------------------------------------------------------|
-| `BST.py`              | Implementation of Binary Search Tree with essential operations such as insertion, deletion, search, and traversal. |
-| `Heap.py`             | Main heap data structure implementation supporting priority queue operations.             |
-| `Heapq.py`            | Additional heap utilities, possibly wrapping Python’s `heapq` module or extensions.         |
-| `Heap.txt`            | Text file potentially containing notes, explanations, or examples related to heaps.        |
-| `Trie.py`             | Implementation of Trie (prefix tree) supporting insertion and search by prefixes.            |
-| `Trie.txt`            | Supporting documentation or explanations related to the Trie data structure.                 |
-| `priority_queue.py`   | Supplementary priority queue utilities, possibly building on heap implementations.                |
-| `.idea/`              | Project settings (IDE specific configuration). Should generally be excluded from version control unless needed. |
+| Folder / Topic | Description |
+|---|---|
+| `01-binary-tree` | Fundamentals, tree representations, and traversal notebooks (inorder, preorder, postorder, level order). |
+| `02-binary-search-tree` | Binary Search Tree (BST) insertion, search, deletion, and traversals. |
+| `03-AVL-trees` | Self-balancing BST using left/right rotations to maintain $O(\log N)$ operational heights. |
+| `04-heap` | Min-Heap and Max-Heap implementations and Priority Queue handling. |
+| `05-trie` | Trie (Prefix Tree) implementations for efficient prefix matching and string operations. |
 
 ## Features
 
-### Binary Search Tree (BST)
-- Balanced or unbalanced BST implementation.
-- Supports insertion, deletion, lookup, and traversal (inorder, preorder, postorder).
-- Illustrates tree-based searching and sorting concepts.
+### 1. Binary Trees
+- Node representations, basic tree operations, and interactive traversal notebooks.
 
-### Heap
-- Min-heap and/or max-heap operations.
-- Supports insertion, extraction of the root element, heapify operation.
-- Efficient priority queue handling.
+### 2. Binary Search Tree (BST)
+- Supports insertion, deletion, lookup, and traversals (inorder, preorder, postorder).
 
-### Trie (Prefix Tree)
-- Stores sequences, typically strings, for efficient prefix-based retrieval.
-- Useful for autocomplete, spell checking, and prefix search problems.
+### 3. AVL Trees
+- Self-balancing binary search trees with rotational rebalancing (LL, RR, LR, RL).
 
-## Example Usage
+### 4. Heap & Priority Queue
+- Min-heap / Max-heap insertion, root extraction, heapify operations, and priority queues.
 
-Basic usage of the BST (in `BST.py`):
+### 5. Trie (Prefix Tree)
+- Efficient string insertion, lookup, and prefix searches.
+

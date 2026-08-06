@@ -83,3 +83,11 @@
 - Use **linked list queue** for dynamic, unbounded queues.
 - Avoid naive array queues for large or performance-critical applications.
 
+---
+## Practice Questions
+
+Located in `Questions/` and `queue_using_stacks.py`:
+- Queue implementation using Stacks (`Q4_QueueStack.py`, `queue_using_stacks.py`)
+- Min Stack, Stack of Plates, Sort Stack, Animal Shelter problems.
+
+

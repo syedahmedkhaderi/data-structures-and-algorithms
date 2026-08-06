@@ -17,10 +17,10 @@ A focused collection of **stack data structures** implemented in Python — show
 ## Folder Structure
 
 ```
-7-Stacks/
-├── MultiStack.py
-├── stacks_Array_implementation.py
-└── stacks_LL_implementation.py
+06-Stacks/
+├── 1-stacks_Array.py
+├── 2-stacks_LL.py
+└── 3-MultiStack.py
 ```
 ## Time and Space Complexity Comparison
 

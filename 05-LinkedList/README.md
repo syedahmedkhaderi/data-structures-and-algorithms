@@ -21,14 +21,22 @@ My first comprehensive learning project demonstrating all types of **linked list
 ## Folder Structure
 
 ```
-6-LinkedList/
-├── 1-Singly LL/
-│   └── singly_linked_list.py
-├── 2-Doubly LL/
+05-LinkedList/
+├── 01-Singly LL/
+│   ├── singly_linked_list.py
+│   └── questions.ipynb
+├── 02-Doubly LL/
 │   └── doubly_linked_list.py
-├── 3-Circular LL/
+├── 03-Circular LL/
 │   ├── circular_linked_list.py
-│   └── CircularDoublyLinkedList.py
+│   ├── CircularDoublyLinkedList.py
+│   └── questions.ipynb
+├── questions/
+│   ├── Q1_RemoveDups.py
+│   ├── Q2_ReturnKthToLast.py
+│   ├── Q3_Partition.py
+│   ├── Q4_SumLists.py
+│   └── Q5_Intersection.py
 ├── dict_linked_list.py
 ├── Reverse_SLL.py
 └── README.md

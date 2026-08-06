@@ -28,3 +28,7 @@
 - Ensure each recursive call progresses toward the base case.
 - Use print/debug statements to follow the execution order.
 
+## 6. Practice & Questions
+- Notebooks covering common recursive interview problems and patterns (`Questions/interview-qs.ipynb`).
+
+
