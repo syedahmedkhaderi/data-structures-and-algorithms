@@ -1,0 +1,252 @@
+100 LEETCODE GRAPH QUESTIONS - PROGRESSIVE ROADMAP
+Target: 2 questions/day, 50 days
+Built around the topics in your DSA folder: graph representation, BFS/DFS,
+topological sort, disjoint sets, SSSP (BFS/Dijkstra/Bellman-Ford), APSP
+(Floyd-Warshall), MST (Kruskal/Prim).
+
+Legend
+  Diff: E = Easy, M = Medium, H = Hard
+  P    = LeetCode Premium (locked). Skip if you don't have it, or read the
+         problem on the web and implement it from your own driver code.
+  Yours = the file in your DSA folder that this question maps to
+
+
+PHASE 1 - Days 1 to 5 - Trees as graphs, warm-up, basic representation
+| #  | Day | LC   | Title                                   | Diff | Technique                  | Yours                    |
+|----|-----|------|-----------------------------------------|------|----------------------------|--------------------------|
+| 1  | 1   | 108  | Convert Sorted Array to BST             | E    | Divide and conquer         | MinimalTree.py           |
+| 2  | 1   | 110  | Balanced Binary Tree                    | E    | Post-order height          | CheckBalanced.py         |
+| 3  | 2   | 98   | Validate Binary Search Tree             | M    | Min/max bounds recursion   | ValidateBST.py           |
+| 4  | 2   | 102  | Binary Tree Level Order Traversal       | M    | BFS by level               | ListofDepth.py           |
+| 5  | 3   | 236  | Lowest Common Ancestor of Binary Tree   | M    | Post-order search          | FirstCommonAncestor2.py  |
+| 6  | 3   | 1971 | Find if Path Exists in Graph            | E    | BFS/DFS reachability       | RouteBetweenNodes.py     |
+| 7  | 4   | 997  | Find the Town Judge                     | E    | In/out degree              | 01-graph-implementation  |
+| 8  | 4   | 1791 | Find Center of Star Graph               | E    | Degree counting            | 01-graph-implementation  |
+| 9  | 5   | 463  | Island Perimeter                        | E    | Grid scan                  | -                        |
+| 10 | 5   | 733  | Flood Fill                              | E    | Grid DFS                   | 02-bfs-and-dfs           |
+
+PHASE 2 - Days 6 to 10 - Implicit graphs: grid DFS/BFS and components
+| #  | Day | LC   | Title                                   | Diff | Technique                  | Yours                    |
+|----|-----|------|-----------------------------------------|------|----------------------------|--------------------------|
+| 11 | 6   | 200  | Number of Islands                       | M    | Grid DFS, component count  | 02-bfs-and-dfs           |
+| 12 | 6   | 695  | Max Area of Island                      | M    | Grid DFS with return value | -                        |
+| 13 | 7   | 1254 | Number of Closed Islands               | M    | Border-first elimination   | -                        |
+| 14 | 7   | 1020 | Number of Enclaves                      | M    | Border-first elimination   | -                        |
+| 15 | 8   | 130  | Surrounded Regions                      | M    | Reverse thinking from edge | -                        |
+| 16 | 8   | 417  | Pacific Atlantic Water Flow             | M    | Multi-source reverse DFS   | -                        |
+| 17 | 9   | 1905 | Count Sub Islands                       | M    | Paired grid DFS            | -                        |
+| 18 | 9   | 79   | Word Search                             | M    | DFS with backtracking      | -                        |
+| 19 | 10  | 841  | Keys and Rooms                          | M    | DFS reachability           | 02-bfs-and-dfs           |
+| 20 | 10  | 547  | Number of Provinces                     | M    | Components on matrix       | 04-disjoint-sets         |
+
+PHASE 3 - Days 11 to 15 - Explicit graphs, components, bipartite
+| #  | Day | LC   | Title                                        | Diff | Technique              | Yours                   |
+|----|-----|------|----------------------------------------------|------|------------------------|-------------------------|
+| 21 | 11  | 323P | Number of Connected Components in Undirected | M    | Component count        | 04-disjoint-sets        |
+| 22 | 11  | 2316 | Count Unreachable Pairs of Nodes             | M    | Component sizes        | -                       |
+| 23 | 12  | 133  | Clone Graph                                  | M    | DFS + hashmap          | 01-graph-implementation |
+| 24 | 12  | 797  | All Paths From Source to Target              | M    | DFS path enumeration   | 01-bfs-SSSP             |
+| 25 | 13  | 1557 | Min Number of Vertices to Reach All Nodes    | M    | In-degree reasoning    | 03-topological-sort     |
+| 26 | 13  | 1615 | Maximal Network Rank                         | M    | Degree + adjacency     | -                       |
+| 27 | 14  | 261P | Graph Valid Tree                             | M    | Cycle + connectivity   | 04-disjoint-sets        |
+| 28 | 14  | 785  | Is Graph Bipartite?                          | M    | 2-coloring BFS/DFS     | -                       |
+| 29 | 15  | 886  | Possible Bipartition                         | M    | 2-coloring             | -                       |
+| 30 | 15  | 1466 | Reorder Routes to Make Paths Lead to City 0  | M    | DFS on directed edges  | -                       |
+
+PHASE 4 - Days 16 to 20 - Disjoint Set / Union-Find
+| #  | Day | LC   | Title                                        | Diff | Technique              | Yours            |
+|----|-----|------|----------------------------------------------|------|------------------------|------------------|
+| 31 | 16  | 990  | Satisfiability of Equality Equations         | M    | Union-Find basics      | 04-disjoint-sets |
+| 32 | 16  | 684  | Redundant Connection                         | M    | Cycle detect via DSU   | 04-disjoint-sets |
+| 33 | 17  | 721  | Accounts Merge                               | M    | DSU with string keys   | 04-disjoint-sets |
+| 34 | 17  | 1319 | Number of Ops to Make Network Connected      | M    | Components + spare edge| 04-disjoint-sets |
+| 35 | 18  | 947  | Most Stones Removed with Same Row or Column  | M    | DSU on rows/cols       | -                |
+| 36 | 18  | 1202 | Smallest String With Swaps                   | M    | DSU + sort per group   | -                |
+| 37 | 19  | 128  | Longest Consecutive Sequence                 | M    | DSU or hashset         | -                |
+| 38 | 19  | 1101P| Earliest Moment When Everyone Become Friends | M    | DSU over sorted events | -                |
+| 39 | 20  | 959  | Regions Cut By Slashes                       | M    | Grid to 4-cell DSU     | -                |
+| 40 | 20  | 839  | Similar String Groups                        | H    | DSU + pairwise check   | -                |
+
+PHASE 5 - Days 21 to 25 - Topological sort and DAGs
+| #  | Day | LC   | Title                                     | Diff | Technique               | Yours               |
+|----|-----|------|-------------------------------------------|------|-------------------------|---------------------|
+| 41 | 21  | 207  | Course Schedule                           | M    | Cycle detect on DAG     | BuildOrder2.py      |
+| 42 | 21  | 210  | Course Schedule II                        | M    | Kahn's algorithm        | BuildOrder2.py      |
+| 43 | 22  | 1136P| Parallel Courses                          | M    | Topo levels             | 03-topological-sort |
+| 44 | 22  | 2115 | Find All Possible Recipes from Supplies   | M    | Topo with prerequisites | BuildOrder2.py      |
+| 45 | 23  | 802  | Find Eventual Safe States                 | M    | Reverse graph topo      | -                   |
+| 46 | 23  | 851  | Loud and Rich                             | M    | DAG DFS + memo          | -                   |
+| 47 | 24  | 310  | Minimum Height Trees                      | M    | Leaf peeling            | -                   |
+| 48 | 24  | 2192 | All Ancestors of a Node in a DAG          | M    | Reverse DFS per node    | -                   |
+| 49 | 25  | 269P | Alien Dictionary                          | H    | Build graph then topo   | 03-topological-sort |
+| 50 | 25  | 329  | Longest Increasing Path in a Matrix       | H    | DFS + memo on implicit  | -                   |
+
+PHASE 6 - Days 26 to 30 - BFS as shortest path (unweighted, multi-source)
+| #  | Day | LC   | Title                                  | Diff | Technique              | Yours       |
+|----|-----|------|----------------------------------------|------|------------------------|-------------|
+| 51 | 26  | 994  | Rotting Oranges                        | M    | Multi-source BFS       | 01-bfs-SSSP |
+| 52 | 26  | 542  | 01 Matrix                              | M    | Multi-source BFS       | 01-bfs-SSSP |
+| 53 | 27  | 1091 | Shortest Path in Binary Matrix         | M    | BFS 8-directional      | 01-bfs-SSSP |
+| 54 | 27  | 1926 | Nearest Exit from Entrance in Maze     | M    | BFS with exit check    | 01-bfs-SSSP |
+| 55 | 28  | 286P | Walls and Gates                        | M    | Multi-source BFS       | 01-bfs-SSSP |
+| 56 | 28  | 1162 | As Far from Land as Possible           | M    | Multi-source BFS max   | -           |
+| 57 | 29  | 863  | All Nodes Distance K in Binary Tree    | M    | Tree to graph then BFS | -           |
+| 58 | 29  | 909  | Snakes and Ladders                     | M    | BFS on board states    | -           |
+| 59 | 30  | 433  | Minimum Genetic Mutation               | M    | BFS on string states   | -           |
+| 60 | 30  | 752  | Open the Lock                          | M    | BFS on state space     | -           |
+
+PHASE 7 - Days 31 to 35 - Harder BFS, state graphs, component tricks
+| #  | Day | LC   | Title                                  | Diff | Technique                | Yours       |
+|----|-----|------|----------------------------------------|------|--------------------------|-------------|
+| 61 | 31  | 127  | Word Ladder                            | H    | BFS + word buckets       | 01-bfs-SSSP |
+| 62 | 31  | 126  | Word Ladder II                         | H    | BFS + backtrack paths    | 01-bfs-SSSP |
+| 63 | 32  | 815  | Bus Routes                             | H    | BFS on routes not stops  | -           |
+| 64 | 32  | 1129 | Shortest Path with Alternating Colors  | M    | BFS on (node, color)     | -           |
+| 65 | 33  | 934  | Shortest Bridge                        | M    | DFS mark + BFS expand    | -           |
+| 66 | 33  | 2101 | Detonate the Maximum Bombs             | M    | Build graph then DFS     | -           |
+| 67 | 34  | 2359 | Find Closest Node to Given Two Nodes   | M    | Functional graph walk    | -           |
+| 68 | 34  | 490P | The Maze                               | M    | BFS with rolling moves   | -           |
+| 69 | 35  | 827  | Making A Large Island                  | H    | Component id + merge     | -           |
+| 70 | 35  | 924  | Minimize Malware Spread                | H    | Components + counting    | -           |
+
+PHASE 8 - Days 36 to 41 - Dijkstra and 0-1 BFS
+| #  | Day | LC   | Title                                       | Diff | Technique              | Yours          |
+|----|-----|------|---------------------------------------------|------|------------------------|----------------|
+| 71 | 36  | 743  | Network Delay Time                          | M    | Dijkstra baseline      | 02-DijkstraSSSP|
+| 72 | 36  | 1514 | Path with Maximum Probability               | M    | Dijkstra, max variant  | 02-DijkstraSSSP|
+| 73 | 37  | 1976 | Number of Ways to Arrive at Destination     | M    | Dijkstra + path count  | 02-DijkstraSSSP|
+| 74 | 37  | 505P | The Maze II                                 | M    | Dijkstra on grid       | 02-DijkstraSSSP|
+| 75 | 38  | 1631 | Path With Minimum Effort                    | M    | Minimax Dijkstra       | -              |
+| 76 | 38  | 778  | Swim in Rising Water                        | H    | Minimax Dijkstra / DSU | -              |
+| 77 | 39  | 1102P| Path With Maximum Minimum Value             | M    | Maximin Dijkstra       | -              |
+| 78 | 39  | 1786 | Number of Restricted Paths First to Last    | M    | Dijkstra + DAG DP      | -              |
+| 79 | 40  | 2492 | Minimum Score of a Path Between Two Cities  | M    | Component min edge     | 04-disjoint-sets|
+| 80 | 40  | 1368 | Min Cost to Make at Least One Valid Path    | H    | 0-1 BFS (deque)        | -              |
+| 81 | 41  | 2290 | Minimum Obstacle Removal to Reach Corner    | H    | 0-1 BFS (deque)        | -              |
+| 82 | 41  | 882  | Reachable Nodes In Subdivided Graph         | H    | Dijkstra + edge budget | -              |
+
+PHASE 9 - Days 42 to 46 - Bellman-Ford, Floyd-Warshall, constrained paths
+| #  | Day | LC   | Title                                         | Diff | Technique            | Yours            |
+|----|-----|------|-----------------------------------------------|------|----------------------|------------------|
+| 83 | 42  | 787  | Cheapest Flights Within K Stops               | M    | Bellman-Ford k rounds| 03-BellmanFord   |
+| 84 | 42  | 399  | Evaluate Division                             | M    | Weighted DFS / FW    | 01-Floyd-Warshall|
+| 85 | 43  | 1334 | City With Smallest Number of Neighbors        | M    | Floyd-Warshall       | 01-Floyd-Warshall|
+| 86 | 43  | 1462 | Course Schedule IV                            | M    | Transitive closure   | 01-Floyd-Warshall|
+| 87 | 44  | 2976 | Minimum Cost to Convert String I              | M    | Floyd-Warshall on 26 | 01-Floyd-Warshall|
+| 88 | 44  | 1928 | Minimum Cost to Reach Destination in Time     | H    | DP over time (BF)    | 03-BellmanFord   |
+| 89 | 45  | 2045 | Second Minimum Time to Reach Destination      | H    | BFS with 2 distances | 01-bfs-SSSP      |
+| 90 | 45  | 2203 | Min Weighted Subgraph With Required Paths     | H    | 3x Dijkstra + reverse| 02-DijkstraSSSP  |
+| 91 | 46  | 2812 | Find the Safest Path in a Grid                | M    | Multi-source BFS + Dijkstra | -         |
+| 92 | 46  | 2368 | Reachable Nodes With Restrictions             | M    | DFS with blocked set | -                |
+
+PHASE 10 - Days 47 to 50 - MST and advanced structure
+| #  | Day | LC   | Title                                          | Diff | Technique             | Yours       |
+|----|-----|------|------------------------------------------------|------|-----------------------|-------------|
+| 93 | 47  | 1584 | Min Cost to Connect All Points                 | M    | Prim on dense graph   | 02-Prim's   |
+| 94 | 47  | 1135P| Connecting Cities With Minimum Cost            | M    | Kruskal               | 01-Kruskal  |
+| 95 | 48  | 1168P| Optimize Water Distribution in a Village       | H    | MST with virtual node | 01-Kruskal  |
+| 96 | 48  | 1697 | Existence of Edge Length Limited Paths         | H    | Offline sort + DSU    | 01-Kruskal  |
+| 97 | 49  | 1489 | Critical and Pseudo-Critical Edges in MST      | H    | Kruskal, edge testing | 01-Kruskal  |
+| 98 | 49  | 1192 | Critical Connections in a Network              | H    | Tarjan bridges        | new topic   |
+| 99 | 50  | 332  | Reconstruct Itinerary                          | H    | Hierholzer, Eulerian  | new topic   |
+| 100| 50  | 685  | Redundant Connection II                        | H    | DSU + directed cases  | 04-disjoint-sets |
+
+
+ADVICE BASED ON YOUR CURRENT CODE
+
+1. Fix the topological sort bug before Day 21.
+   In 03-topological-sort.ipynb, topological_sort_util does:
+       for i in self.graph:
+   That iterates over every key in the whole graph, not the neighbours of
+   the current node. It should be:
+       for i in self.graph[val]:
+   Your sample output looked plausible by coincidence. Re-run it after the
+   fix and confirm the order changes. Also note that with defaultdict,
+   self.graph[val] on a sink node silently creates an empty entry while you
+   are iterating, which can raise a RuntimeError on bigger inputs. Guard it
+   with self.graph.get(val, []).
+
+2. Your BFS in 01-bfs-SSSP.ipynb has no visited set.
+   Enqueuing full path lists with no visited check is exponential on graphs
+   with cycles and will TLE on LC 127 and 815. Two fixes worth learning:
+   store only (node, distance) plus a parent dict and reconstruct the path
+   at the end, and mark a node visited at enqueue time, not dequeue time.
+
+3. Add path compression to DisjointSet.
+   Your find() recurses without compressing. One line changes the
+   complexity class:
+       self.parent[val] = self.find(self.parent[val])
+       return self.parent[val]
+   Without it, LC 839 and 952-style problems will time out. Union by rank
+   alone gives O(log n); with compression you get near O(1) amortised.
+
+4. Stop using a sentinel like INF = 9999 in Floyd-Warshall.
+   In 01-Floyd-Warshall.ipynb, distance[i][k] + distance[k][j] can add two
+   sentinels together and produce a number that looks like a real path.
+   Use float('inf') and skip the relaxation when either side is infinite.
+   Also, your input matrix has G[3][3] = 1, so the diagonal is wrong. The
+   diagonal must be 0 or you are claiming a node is 1 away from itself.
+
+5. Your Floyd-Warshall mutates the caller's matrix.
+   distance = G is an alias, not a copy. Use copy.deepcopy(G). You will hit
+   this exact class of bug on LC 1462 where the grader reuses inputs.
+
+6. checkRoute in RouteBetweenNodes.py has a broken break.
+   The break exits the inner for loop only, so the while loop keeps running
+   after you found the path. It happens to return the right answer, but on
+   LC 1971 with 200k edges it wastes the whole traversal. Return directly.
+
+7. DFS with an explicit stack gives a different order than recursive DFS.
+   In 02-bfs-and-dfs.ipynb your dfs marks visited at push time, which is
+   correct for correctness but produces reverse-neighbour ordering. Be aware
+   of this when a problem asks for lexicographically smallest output
+   (LC 332 will punish you for it).
+
+
+WHAT YOU HAVE NOT LEARNED YET, AND WHERE IT SHOWS UP
+
+  0-1 BFS with a deque            Q80, Q81. This is Dijkstra when all
+                                  weights are 0 or 1. Deque instead of heap,
+                                  O(V+E) instead of O(E log V).
+  Bipartite / graph coloring      Q28, Q29. Not in your folder at all.
+  Tarjan bridges and articulation Q98. Your only exposure to low-link ideas.
+  Eulerian path (Hierholzer)      Q99.
+  Reverse graph as a technique    Q45, Q48, Q90. Underused in your notes.
+  Minimax / maximin path          Q75, Q76, Q77. Dijkstra where you relax on
+                                  max-of-edges instead of sum-of-edges.
+  Offline queries + DSU           Q96. Sort queries, sort edges, sweep.
+
+  Deliberately excluded: max-flow, min-cost-flow, bipartite matching, and
+  Johnson's algorithm. They almost never appear in interviews and they are
+  not in your syllabus. Revisit only if you go into competitive programming.
+
+
+HOW TO ACTUALLY RUN THE 50 DAYS
+
+  Per question, cap yourself at 25 minutes of thinking before reading a
+  hint, and 40 minutes total before reading an editorial. Two questions is
+  roughly one hour a day. If you go past that consistently you are grinding,
+  not learning.
+
+  Write the solution in your own template, not LeetCode's. Keep one file
+  called graph_templates.py with your five canonical routines: BFS on grid,
+  BFS on adjacency list, DFS recursive, Kahn's topological sort, Dijkstra
+  with heapq, DSU class. Every question you solve should be a small edit to
+  one of those six, not a fresh start. By Day 20 you should be able to type
+  all six from memory in under ten minutes.
+
+  Redo, don't just move on. On Days 10, 20, 30, 40 and 50, replace one of
+  the two new questions with a re-solve of a question from two phases back,
+  from a blank file. If you cannot re-solve LC 210 on Day 30 without help,
+  you did not learn it on Day 21.
+
+  Keep a one-line log per question: the trap you fell into. Not the
+  solution, the trap. "Forgot to mark visited at enqueue." "Used sum instead
+  of max in the relaxation." After 100 entries that log is more valuable
+  than the 100 solutions.
+
+  Interview signal: the 20 questions that come up most often out of this
+  list are 200, 133, 207, 210, 547, 684, 721, 994, 542, 1091, 127, 743,
+  787, 399, 1584, 269, 329, 417, 130, 332. If you are ever short on time,
+  those are the ones to keep warm.
+
