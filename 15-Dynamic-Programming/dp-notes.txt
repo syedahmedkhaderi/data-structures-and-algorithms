@@ -1,0 +1,49 @@
+Dynamic Programming (DP) Notes
+==============================
+
+1. What is Dynamic Programming?
+   - Dynamic Programming is an algorithmic optimization technique used for solving complex problems by breaking them down into simpler overlapping subproblems.
+   - It stores the results of subproblems so that each subproblem is solved only once, eliminating redundant work found in plain Divide & Conquer / recursion.
+
+2. Key Properties for Applying DP:
+   - Overlapping Subproblems: The problem can be broken into smaller subproblems which are reused multiple times.
+   - Optimal Substructure: An optimal solution to the problem contains optimal solutions to its subproblems.
+
+3. Approaches to Dynamic Programming:
+   - Top-Down with Memoization:
+     - Uses recursion.
+     - Saves intermediate subproblem answers in a hash map / dictionary (`memo`) before returning.
+     - Checks if state exists in cache prior to recursive execution.
+   - Bottom-Up with Tabulation:
+     - Iterative approach using array/matrix.
+     - Solves smaller base subproblems first and fills up the table towards the target answer.
+
+4. Divide & Conquer vs Dynamic Programming:
+   - Divide & Conquer splits a problem into non-overlapping subproblems (e.g., Merge Sort).
+   - Dynamic Programming handles overlapping subproblems by caching results (e.g., Fibonacci, Edit Distance, Knapsack).
+
+5. Problems & State Representation (Memoization):
+   - Number Factor Problem:
+     - State: `n`
+     - Transitions: `numberFactor(n-1) + numberFactor(n-3) + numberFactor(n-4)`
+   - House Robber:
+     - State: `currentIndex`
+     - Transitions: `max(houses[i] + houseRobber(i+2), houseRobber(i+1))`
+   - Longest Palindromic Subsequence (LPS):
+     - State: `(startIndex, endIndex)`
+     - Transitions: match -> `2 + LPS(s+1, e-1)`; mismatch -> `max(LPS(s, e-1), LPS(s+1, e))`
+   - Longest Common Subsequence (LCS):
+     - State: `(index1, index2)`
+     - Transitions: match -> `1 + LCS(i1+1, i2+1)`; mismatch -> `max(LCS(i1, i2+1), LCS(i1+1, i2))`
+   - 0/1 Knapsack:
+     - State: `(currentIndex, capacity)`
+     - Transitions: `max(item.profit + Knapsack(i+1, cap-wt), Knapsack(i+1, cap))`
+   - Convert String (Edit Distance):
+     - State: `(index1, index2)`
+     - Transitions: match -> `Edit(i1+1, i2+1)`; mismatch -> `1 + min(delete, insert, replace)`
+   - Minimum Cost Path (2D Array):
+     - State: `(row, col)`
+     - Transitions: `grid[row][col] + min(MinCost(row-1, col), MinCost(row, col-1))`
+   - Number of Paths with Target Cost (2D Array):
+     - State: `(row, col, cost)`
+     - Transitions: `Paths(row-1, col, cost-val) + Paths(row, col-1, cost-val)`
