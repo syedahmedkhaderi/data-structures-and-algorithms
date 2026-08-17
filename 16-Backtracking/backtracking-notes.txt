@@ -1,0 +1,57 @@
+Backtracking Notes
+
+1. What is Backtracking?
+   - Backtracking is an algorithmic strategy for solving constraint satisfaction and optimization problems incrementally.
+   - It builds candidate solutions one step at a time and abandons ("backtracks") a candidate branch as soon as it determines the candidate cannot lead to a valid solution.
+   - It systematically searches the State Space Tree using Depth-First Search (DFS) combined with early pruning (bounding functions).
+
+2. Key Components of Backtracking:
+   - Choice: The set of options available at the current decision state.
+   - Constraint / Bounding Function: Rules that validate whether a partial solution is promising (prunes invalid branches early).
+   - Goal / Base Case: Condition indicating a complete and valid solution has been reached.
+   - Backtrack Step: Restoring/undoing the state after exploring a choice so subsequent choices can be evaluated cleanly.
+
+3. Backtracking vs Other Paradigms:
+   - Recursion / Brute Force: Evaluates all $O(2^N)$ or $O(N!)$ combinations without early stopping. Backtracking prunes non-viable branches early.
+   - Divide & Conquer: Breaks a problem into independent subproblems (e.g., Merge Sort).
+   - Dynamic Programming: Optimizes overlapping subproblems with memoization/tabulation; backtracking is used when subproblems do not overlap or all solutions are needed.
+   - Greedy Algorithms: Makes a non-reversible locally optimal choice at each step; backtracking can undo decisions.
+
+4. General Backtracking Template:
+   def backtrack(state):
+       if is_goal(state):
+           process_solution(state)
+           return True (or collect solution)
+       
+       for choice in available_choices(state):
+           if is_valid(choice, state):
+               make_choice(state, choice)        # 1. Choose
+               if backtrack(state):              # 2. Explore
+                   return True
+               undo_choice(state, choice)        # 3. Un-choose (Backtrack)
+       
+       return False
+
+5. Standard Problems & State Representation:
+   - N-Queens Problem:
+     - State: Chessboard grid / placed queen locations column-by-column.
+     - Choice: Row index in current column `col_index`.
+     - Constraint: No two queens share the same row, column, or diagonal.
+     - Backtrack: Reset `chess_table[row][col] = 0`.
+   - Sudoku Solver:
+     - State: Grid position `(row, col)`.
+     - Choice: Digits 1 to 9.
+     - Constraint: Unique in row, column, and 3x3 box.
+   - Subsets / Combination Sum:
+     - State: Current element index, target sum/subset.
+     - Choice: Include or exclude the element at `currentIndex`.
+   - Permutations:
+     - State: Built permutation list.
+     - Choice: Pick an unused element from the candidate set.
+   - Knight's Tour / Rat in a Maze:
+     - State: Grid coordinate `(x, y)`.
+     - Choice: Valid unvisited adjacent moves (Up, Down, Left, Right).
+
+6. Time & Space Complexity Characteristics:
+   - Time Complexity: Exponential in worst case (e.g., $O(N!)$ for N-Queens, $O(2^N)$ for Subsets, $O(9^{N^2})$ for Sudoku). Pruning reduces runtime dramatically in practice.
+   - Space Complexity: $O(D)$ where $D$ is the maximum depth of the recursion tree (stack space) plus space required for state tracking (e.g., $O(N)$ or $O(N^2)$).
